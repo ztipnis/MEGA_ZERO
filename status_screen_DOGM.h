@@ -408,7 +408,7 @@ static void lcd_implementation_status_screen() {
         u8g.setColorIndex(0); // white on black
       #endif
 
-      u8g.setPrintPos(0 * XYZ_SPACING + X_LABEL_POS, XYZ_BASELINE);  //xyzÈýÖáµÄ×ø±ê
+      u8g.setPrintPos(0 * XYZ_SPACING + X_LABEL_POS, XYZ_BASELINE);  //xyzï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
       lcd_printPGM(PSTR(MSG_X));
       u8g.setPrintPos(0 * XYZ_SPACING + X_VALUE_POS, XYZ_BASELINE);
       _draw_axis_value(X_AXIS, xstring, blink);
@@ -440,7 +440,7 @@ static void lcd_implementation_status_screen() {
 
     lcd_setFont(FONT_STATUSMENU);
     u8g.setPrintPos(12, 50);
-    lcd_print(itostr3(feedrate_percentage)); //´òÓ¡»úËÙ¶È daxiog
+    lcd_print(itostr3(feedrate_percentage)); //ï¿½ï¿½Ó¡ï¿½ï¿½ï¿½Ù¶ï¿½ daxiog
     u8g.print('%');
 
     //

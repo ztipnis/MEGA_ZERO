@@ -111,7 +111,7 @@ extern uint8_t active_extruder, commands_in_queue, cmd_queue_index_r;
  * If a saved state exists, populate job_recovery_commands with
  * commands to restore the machine state and continue the file.
  */
-void check_print_job_recovery() {//²é¿´ÊÇ·ñÓÐ¶ÏµçÐø´òµÄÎÄ¼þ
+void check_print_job_recovery() {//ï¿½é¿´ï¿½Ç·ï¿½ï¿½Ð¶Ïµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½
   memset(&job_recovery_info, 0, sizeof(job_recovery_info));
   ZERO(job_recovery_commands);
 
@@ -123,10 +123,10 @@ void check_print_job_recovery() {//²é¿´ÊÇ·ñÓÐ¶ÏµçÐø´òµÄÎÄ¼þ
       SERIAL_PROTOCOLLNPAIR("Init job recovery info. Size: ", int(sizeof(job_recovery_info)));
     #endif
 
-    if (card.jobRecoverFileExists()) { //Èç¹ûÓÐ¶ÏµçÐø´òµÄÎÄ¼þ£¬
-      card.openJobRecoveryFile(true);   //´ò¿ªÎÄ¼þ
-      card.loadJobRecoveryInfo();       //ÏÂÔØÐÅÏ¢
-      card.closeJobRecoveryFile();      //¹Ø±ÕÎÄ¼þ
+    if (card.jobRecoverFileExists()) { //ï¿½ï¿½ï¿½ï¿½Ð¶Ïµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½ï¿½ï¿½
+      card.openJobRecoveryFile(true);   //ï¿½ï¿½ï¿½Ä¼ï¿½
+      card.loadJobRecoveryInfo();       //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢
+      card.closeJobRecoveryFile();      //ï¿½Ø±ï¿½ï¿½Ä¼ï¿½
       //card.removeJobRecoveryFile();
 
       if (job_recovery_info.valid_head && job_recovery_info.valid_head == job_recovery_info.valid_foot) {

@@ -2784,10 +2784,10 @@ extern char flag_adjusted_level ;
       //
       #if TEMP_SENSOR_1 != 0 || TEMP_SENSOR_2 != 0 || TEMP_SENSOR_3 != 0 || TEMP_SENSOR_4 != 0 || HAS_HEATED_BED
         MENU_ITEM(submenu, MSG_PREHEAT_1, lcd_preheat_m1_menu);
-      //  MENU_ITEM(submenu, MSG_PREHEAT_2, lcd_preheat_m2_menu);
+        MENU_ITEM(submenu, MSG_PREHEAT_2, lcd_preheat_m2_menu);
       #else
         MENU_ITEM(function, MSG_PREHEAT_1, lcd_preheat_m1_e0_only);
-     //   MENU_ITEM(function, MSG_PREHEAT_2, lcd_preheat_m2_e0_only); // daxiong only pla
+        MENU_ITEM(function, MSG_PREHEAT_2, lcd_preheat_m2_e0_only); // daxiong only pla
       #endif
 
     #endif // HAS_TEMP_HOTEND

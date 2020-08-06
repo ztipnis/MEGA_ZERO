@@ -175,7 +175,7 @@
  * M250 - Set LCD contrast: "M250 C<contrast>" (0-63). (Requires LCD support)
  * M260 - i2c Send Data (Requires EXPERIMENTAL_I2CBUS)
  * M261 - i2c Request Data (Requires EXPERIMENTAL_I2CBUS)
- * M280 - Set servo position absolute: "M280 P<index> S<angle|��s>". (Requires servos)
+ * M280 - Set servo position absolute: "M280 P<index> S<angle|��s>". (Requires servos)
  * M290 - Babystepping (Requires BABYSTEPPING)
  * M300 - Play beep sound S<frequency Hz> P<duration ms>
  * M301 - Set PID parameters P I and D. (Requires PIDTEMP)
@@ -2725,7 +2725,7 @@ void clean_up_after_endstop_or_probe_move() {
     //                                : ((c < b) ? b : (a < c) ? a : c);
   }
 
-  //Enable this if your SCARA uses 180�� of total area
+  //Enable this if your SCARA uses 180�� of total area
   //#define EXTRAPOLATE_FROM_EDGE
 
   #if ENABLED(EXTRAPOLATE_FROM_EDGE)
@@ -9208,7 +9208,7 @@ inline void gcode_M204() {
 /**
  * M205: Set Advanced Settings
  *
- *    B = Min Segment Time (��s)
+ *    B = Min Segment Time (��s)
  *    S = Min Feed Rate (units/s)
  *    T = Min Travel Feed Rate (units/s)
  *    X = Max X Jerk (units/sec^2)
@@ -14435,16 +14435,16 @@ void stop() {
  *  - Print startup messages and diagnostics
  *  - Get EEPROM or default settings
  *  - Initialize managers for:
- *    �?temperature
- *    �?planner
- *    �?watchdog
- *    �?stepper
- *    �?photo pin
- *    �?servos
- *    �?LCD controller
- *    �?Digipot I2C
- *    �?Z probe sled
- *    �?status LEDs
+ *    �?temperature
+ *    �?planner
+ *    �?watchdog
+ *    �?stepper
+ *    �?photo pin
+ *    �?servos
+ *    �?LCD controller
+ *    �?Digipot I2C
+ *    �?Z probe sled
+ *    �?status LEDs
  */
 void setup() {
 
@@ -14711,8 +14711,8 @@ static char temp=0;
 void loop() {
 
 
-//暂停 抬高的步�?//1,首先停止SD卡，不允许读新的指令
-//2，等待缓存区的指令执行结�?，然后嵌入G91 Z20.0 两个指令
+//暂停 抬高的步�?//1,首先停止SD卡，不允许读新的指令
+//2，等待缓存区的指令执行结�?，然后嵌入G91 Z20.0 两个指令
   if(TFTpausingFlag==2)pauseCMDsend();//when pause,i need rase z axis,but if i use enquecommand_P,it maybe lose cmd,very dangerous,so i need sent cmd one by one
 
 
