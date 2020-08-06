@@ -40,7 +40,7 @@
  * This extension has been tested on Arduino 1.6.12 & 1.8.0
  *
  * Here's the JSON path:
- * https://raw.githubusercontent.com/Lauszus/Sanguino/master/package_lauszus_sanguino_index.json
+   * https://raw.githubusercontent.com/Lauszus/Sanguino/master/package_lauszus_sanguino_index.json
  *
  * When installing select 1.0.2
  *
